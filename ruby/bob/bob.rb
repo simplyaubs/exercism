@@ -1,7 +1,7 @@
 class Bob
   def hey(words)
     case
-      when words == words.upcase
+      when shouting?(words)
         "Woah, chill out!"
       when words.end_with?("?")
         "Sure."
@@ -9,4 +9,9 @@ class Bob
         "Whatever."
     end
   end
+
+  def shouting?(words)
+    words == words.upcase && words.match(/[A-Z]/)
+  end
+
 end
