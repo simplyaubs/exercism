@@ -25,22 +25,22 @@ class TeenagerTest < MiniTest::Unit::TestCase
   end
 
   def test_shouting
-    skip
+
     assert_equal 'Woah, chill out!', teenager.hey('WATCH OUT!')
   end
 
   def test_asking_a_question
-    skip
+
     assert_equal 'Sure.', teenager.hey('Does this cryogenic chamber make me look fat?')
   end
 
   def test_asking_a_numeric_question
-    skip
+
     assert_equal 'Sure.', teenager.hey('You are, what, like 15?')
   end
 
   def test_talking_forcefully
-    skip
+    
     assert_equal 'Whatever.', teenager.hey("Let's go make out behind the gym!")
   end
 
