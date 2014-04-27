@@ -1,7 +1,7 @@
 class Robot
 
   def name
-    @name ||= ('a'..'z').to_a.shuffle.first + ('a'..'z').to_a.shuffle.first + rand(9).to_s + rand(9).to_s + rand(9).to_s
+    @name ||= ('a'..'z').to_a.shuffle[0, 2].join + rand(100..999).to_s
   end
 
   def reset
