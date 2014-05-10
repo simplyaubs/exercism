@@ -9,34 +9,39 @@ class SpaceAge
   end
 
   def on_earth
-    (@seconds / 31_557_600.to_f).round(2)
+    solar_year_conversion(1)
   end
 
   def on_mercury
-    ((@seconds / 31_557_600.to_f) / 0.2408467).round(2)
+    solar_year_conversion(0.2408467)
   end
 
   def on_venus
-    ((@seconds / 31_557_600.to_f) / 0.61519726).round(2)
+    solar_year_conversion(0.61519726)
   end
 
   def on_mars
-    ((@seconds / 31_557_600.to_f) / 1.8808158).round(2)
+    solar_year_conversion(1.8808158)
   end
 
   def on_jupiter
-    ((@seconds / 31_557_600.to_f) / 11.862615).round(2)
+    solar_year_conversion(11.862615)
   end
 
   def on_saturn
-    ((@seconds / 31_557_600.to_f) / 29.447498).round(2)
+    solar_year_conversion(29.447498)
   end
 
   def on_uranus
-    ((@seconds / 31_557_600.to_f) / 84.016846).round(2)
+    solar_year_conversion(84.016846)
   end
 
   def on_neptune
-    ((@seconds / 31_557_600.to_f) / 164.79132).round(2)
+    solar_year_conversion(164.79132)
+  end
+
+  private
+  def solar_year_conversion(orbital_period)
+    ((@seconds / 31_557_600.to_f) / orbital_period ).round(2)
   end
 end
